@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SplashActivity">
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_splash"/>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="80dp"
+        android:layout_marginStart="50dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnGetStarted"
+            android:textColor="@color/white"
+            android:paddingStart="12dp"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:paddingEnd="12dp"
+            android:background="@drawable/btn_bg"
+            android:text="Começar"/>
+
+        <ProgressBar
+            android:id="@+id/loader"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:outlineAmbientShadowColor="@color/black" />
+
+    </FrameLayout>
+
+</RelativeLayout>
+
