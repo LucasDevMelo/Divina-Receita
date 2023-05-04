@@ -27,7 +27,7 @@
             android:textColor="@color/white"
             android:paddingStart="12dp"
             android:gravity="center"
-            android:visibility="invisible"
+            android:visibility="visible"
             android:paddingEnd="12dp"
             android:background="@drawable/btn_bg"
             android:text="Começar"/>

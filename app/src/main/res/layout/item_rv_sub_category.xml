@@ -1,31 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".SplashActivity">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="80sp"
-        android:layout_height="80sp"
+        android:layout_width="200sp"
+        android:layout_height="300sp"
         android:layout_margin="10dp"
-        app:cardBackgroundColor="@color/yellow"
         app:cardCornerRadius="10dp"
-        app:cardElevation="10dp">
+        app:cardElevation="15dp">
 
-            <ImageView
-                    android:id="@+id/img_dish"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_marginRight="-15dp"
-                    android:layout_marginTop="-15dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentTop="true"
-                    android:src="@drawable/cat_img"/>
-
+        <ImageView
+            android:id="@+id/img_dish"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_splash" />
 
 
     </androidx.cardview.widget.CardView>
-    
-</RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_dish_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome do prato"
+            android:textSize="20dp"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:fontFamily="@font/gilroy_light"
+            android:paddingStart="10sp"/>
+    </LinearLayout>
+
+</LinearLayout>
