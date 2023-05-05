@@ -31,5 +31,5 @@ class MainCategoryAdapter: RecyclerView.Adapter<MainCategoryAdapter.RecipeViewHo
 
     override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
         holder.itemView.findViewById<TextView>(R.id.tv_dish_name).text = arrMainCategory[position].dishName
-        }
+    }
 }

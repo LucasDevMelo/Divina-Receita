@@ -5,9 +5,12 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.divinareceita.dao.RecipeDao
+import com.example.divinareceita.entities.Category
+import com.example.divinareceita.entities.CategoryItems
 import com.example.divinareceita.entities.Recipes
+import com.example.divinareceita.entities.converter.CategoryListConverter
 
-@Database(entities = [Recipes::class], version = 1, exportSchema = false)
+@Database(entities = [Recipes::class, CategoryItems::class,Category::class, CategoryListConverter::class], version = 1, exportSchema = false)
 abstract class RecipeDatabase: RoomDatabase() {
 
     companion object{

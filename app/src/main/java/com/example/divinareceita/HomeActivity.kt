@@ -8,7 +8,7 @@ import com.example.divinareceita.adapter.MainCategoryAdapter
 import com.example.divinareceita.adapter.SubCategoryAdapter
 import com.example.divinareceita.entities.Recipes
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : BaseActivity() {
     var arrMainCategory = ArrayList<Recipes>()
     var arrSubCategory = ArrayList<Recipes>()
     var mainCategoryAdapter = MainCategoryAdapter()
