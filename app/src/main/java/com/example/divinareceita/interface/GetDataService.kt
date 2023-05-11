@@ -6,5 +6,5 @@ import retrofit2.http.GET
 
 interface GetDataService {
     @GET("/category.php")
-    fun getCategoryList(): Call<List<Category>>
+    fun getCategoryList(): Call<Category>
 }

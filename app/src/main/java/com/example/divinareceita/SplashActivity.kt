@@ -8,7 +8,6 @@ import com.example.divinareceita.database.RecipeDatabase
 import com.example.divinareceita.entities.Category
 import com.example.divinareceita.`interface`.GetDataService
 import com.example.divinareceita.retofitclient.RetrofitClientInstance
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import pub.devrel.easypermissions.AppSettingsDialog
 import pub.devrel.easypermissions.EasyPermissions
@@ -35,7 +34,7 @@ class SplashActivity : BaseActivity(), EasyPermissions.RationaleCallbacks, EasyP
 
     fun getCategories(){
         val service = RetrofitClientInstance.retrofitInstance!!.create(GetDataService::class.java)
-        val call = service.getCategoryList()
+        val call = service.getCategoryList()  
         call.enqueue(object : Callback<Category>{
             override fun onFailure(call: Call<Category>, t: Throwable) {
 
