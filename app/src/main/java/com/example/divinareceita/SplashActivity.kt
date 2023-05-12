@@ -17,7 +17,6 @@ import retrofit2.Callback
 
 class SplashActivity : BaseActivity(), EasyPermissions.RationaleCallbacks, EasyPermissions.PermissionCallbacks{
     private var READ_STORAGE_PERM = 123
-    val buttonStarted: Button = findViewById(R.id.btnGetStarted)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
@@ -25,7 +24,7 @@ class SplashActivity : BaseActivity(), EasyPermissions.RationaleCallbacks, EasyP
         readStorageTask()
 
 
-        buttonStarted.setOnClickListener {
+        findViewById<Button>(R.id.btnGetStarted).setOnClickListener {
             var intent = Intent(this@SplashActivity, HomeActivity:: class.java)
             startActivity(intent)
             finish()
@@ -34,7 +33,7 @@ class SplashActivity : BaseActivity(), EasyPermissions.RationaleCallbacks, EasyP
 
     fun getCategories(){
         val service = RetrofitClientInstance.retrofitInstance!!.create(GetDataService::class.java)
-        val call = service.getCategoryList()  
+        val call = service.getCategoryList()
         call.enqueue(object : Callback<Category>{
             override fun onFailure(call: Call<Category>, t: Throwable) {
 
@@ -62,7 +61,7 @@ class SplashActivity : BaseActivity(), EasyPermissions.RationaleCallbacks, EasyP
                         .recipeDao().insertCategory(arr)
                 }
 
-                buttonStarted.visibility = View.VISIBLE
+                findViewById<Button>(R.id.btnGetStarted).visibility = View.VISIBLE
             }
         }
 
@@ -95,7 +94,7 @@ class SplashActivity : BaseActivity(), EasyPermissions.RationaleCallbacks, EasyP
         EasyPermissions.onRequestPermissionsResult(requestCode,permissions,grantResults,this)
     }
     override fun onRationaleAccepted(requestCode: Int) {
-        TODO("Not yet implemented")
+
     }
 
     override fun onRationaleDenied(requestCode: Int) {
@@ -103,7 +102,7 @@ class SplashActivity : BaseActivity(), EasyPermissions.RationaleCallbacks, EasyP
     }
 
     override fun onPermissionsGranted(requestCode: Int, perms: MutableList<String>) {
-        TODO("Not yet implemented")
+
     }
 
     override fun onPermissionsDenied(requestCode: Int, perms: MutableList<String>) {
